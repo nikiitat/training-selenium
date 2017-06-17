@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static org.junit.Assert.assertTrue;
+
 /**
  * Created by tertynik on 13/06/2017.
  */
@@ -19,17 +21,19 @@ public class MyFirstTest {
     @Before
     public void start(){
         System.setProperty("webdriver.chrome.driver",
-                "C:\\Tools\\chromedriver.exe");
+                "chromedriver");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
+
     }
 
     @Test
     public void myFirstTest(){
-        driver.get("http://www.google.com/");
-        driver.findElement(By.name("q")).sendKeys("facebook");
-        driver.findElement(By.xpath("//button[@name='btnG']")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Facebook - Log In or Sign Up")));
+        driver.get("http://localhost/litecart/admin/login.php");
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img[alt=\"My Store\"]")));
     }
 
     @After
