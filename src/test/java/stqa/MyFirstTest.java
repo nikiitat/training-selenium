@@ -6,8 +6,10 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static org.junit.Assert.assertTrue;
 
@@ -16,14 +18,14 @@ import static org.junit.Assert.assertTrue;
  */
 public class MyFirstTest {
     private WebDriver driver;
+//    private WebDriver firefoxDriver;
     private WebDriverWait wait;
 
     @Before
     public void start(){
-        System.setProperty("webdriver.chrome.driver",
-                "chromedriver");
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 10);
+//        firefoxDriver = new FirefoxDriver();
+        wait = new WebDriverWait(driver, 20);
 
     }
 
