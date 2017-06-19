@@ -3,10 +3,9 @@ package stqa;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,22 +16,35 @@ import static org.junit.Assert.assertTrue;
  */
 public class MyAdminTest {
     private WebDriver driver;
+    private WebDriverWait wait;
 
     boolean isElementPresent(By locator) {
         try {
+            wait.until((WebDriver d) -> d.findElement(locator));
+//            driver.findElement(locator);
+            return true;
+        } catch (TimeoutException ex) {
+            return false;
+        }
+    }
+
+    boolean isElementPresent1(By locator) {
+        try {
+            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
             driver.findElement(locator);
             return true;
-        } catch (NoSuchElementException ex) {
+        } catch (TimeoutException ex) {
             return false;
         }
     }
 
     @Before
     public void start(){
-        System.setProperty("webdriver.chrome.driver",
-                "C:\\Tools\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver",
+//                "C:\\Tools\\chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver, 10);
+//        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("http://localhost/litecart/admin/login.php");
         driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("admin");
@@ -134,7 +146,7 @@ public class MyAdminTest {
     @Test
     public void myAdminEightTest(){
         driver.findElement(By.xpath("//span[text()='Modules']")).click();
-        assertTrue(isElementPresent(By.xpath("//h1[text()='  Job Modules']")));
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Job Modules']")));
 
         driver.findElement(By.xpath("//span[text()='Customer']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Customer Modules']")));
@@ -156,6 +168,124 @@ public class MyAdminTest {
 
         driver.findElement(By.xpath("//span[text()='Background Jobs']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Job Modules']")));
+    }
+
+    @Test
+    public void myAdminNinethTest(){
+        driver.findElement(By.xpath("(//span[text()='Orders'])[1]")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Orders']")));
+
+        driver.findElement(By.xpath("//span[text()='Order Statuses']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Order Statuses']")));
+
+        driver.findElement(By.xpath("(//span[text()='Orders'])[2]")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Orders']")));
+    }
+
+    @Test
+    public void myAdminTenthTest(){
+        driver.findElement(By.xpath("//span[text()='Pages']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Pages']")));
+    }
+
+    @Test
+    public void myAdminEleventhTest(){
+        driver.findElement(By.xpath("//span[text()='Reports']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Monthly Sales']")));
+
+        driver.findElement(By.xpath("//span[text()='Most Sold Products']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Most Sold Products']")));
+
+        driver.findElement(By.xpath("//span[text()='Most Shopping Customers']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Most Shopping Customers']")));
+
+        driver.findElement(By.xpath("//span[text()='Monthly Sales']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Monthly Sales']")));
+    }
+
+    @Test
+    public void myAdminTwelvethTest(){
+        driver.findElement(By.xpath("//span[text()='Settings']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Settings']")));
+
+        driver.findElement(By.xpath("//span[text()='Defaults']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Settings']")));
+
+        driver.findElement(By.xpath("//span[text()='General']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Settings']")));
+
+        driver.findElement(By.xpath("//span[text()='Listings']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Settings']")));
+
+        driver.findElement(By.xpath("//span[text()='Images']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Settings']")));
+
+        driver.findElement(By.xpath("//span[text()='Checkout']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Settings']")));
+
+        driver.findElement(By.xpath("//span[text()='Checkout']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Settings']")));
+
+        driver.findElement(By.xpath("//span[text()='Advanced']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Settings']")));
+
+        driver.findElement(By.xpath("//span[text()='Security']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Settings']")));
+
+        driver.findElement(By.xpath("//span[text()='Store Info']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Settings']")));
+    }
+
+    @Test
+    public void myAdminThirteenTest(){
+        driver.findElement(By.xpath("//span[text()='Slides']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Slides']")));
+    }
+
+    @Test
+    public void myAdminFourteenTest(){
+        assertTrue(isElementPresent1(By.xpath("//span[text()='Tax']")));
+        driver.findElement(By.xpath("//span[text()='Tax']")).click();
+        assertTrue(isElementPresent1(By.xpath("//h1[text()=' Tax Classes']")));
+
+        driver.findElement(By.xpath("//span[text()='Tax Rates']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Tax Rates']")));
+
+        driver.findElement(By.xpath("//span[text()='Tax Classes']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Tax Classes']")));
+    }
+
+    @Test
+    public void myAdminFifteenTest(){
+        assertTrue(isElementPresent(By.xpath("//span[text()='Translations']")));
+        driver.findElement(By.xpath("//span[text()='Translations']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Search Translations']")));
+
+        driver.findElement(By.xpath("//span[text()='Scan Files']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Scan Files For Translations']")));
+
+        driver.findElement(By.xpath("//span[text()='CSV Import/Export']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' CSV Import/Export']")));
+
+        driver.findElement(By.xpath("//span[text()='Search Translations']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Search Translations']")));
+    }
+
+    @Test
+    public void myAdminSixteenTest(){
+        assertTrue(isElementPresent(By.xpath("//span[text()='Users']")));
+        driver.findElement(By.xpath("//span[text()='Users']")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Users']")));
+    }
+
+    @Test
+    public void myAdminSeventeenTest(){
+        assertTrue(isElementPresent(By.xpath("(//span[text()='vQmods'])[1]")));
+        driver.findElement(By.xpath("(//span[text()='vQmods'])[1]")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' vQmods']")));
+
+        driver.findElement(By.xpath("(//span[text()='vQmods'])[2]")).click();
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' vQmods']")));
     }
 
     @After
