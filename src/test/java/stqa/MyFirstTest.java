@@ -9,12 +9,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 /**
  * Created by tertynik on 13/06/2017.
  */
 public class MyFirstTest {
     private WebDriver driver;
-    //    private WebDriver firefoxDriver;
+
     private WebDriverWait wait;
 
     @Before
