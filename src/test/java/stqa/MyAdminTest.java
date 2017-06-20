@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -22,7 +23,10 @@ public class MyAdminTest {
         try {
             wait.until((WebDriver d) -> d.findElement(locator));
             return true;
-        } catch (TimeoutException ex) {
+        } catch (InvalidSelectorException ex) {
+            throw ex;
+        }
+        catch (NoSuchElementException ex) {
             return false;
         }
     }

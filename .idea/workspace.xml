@@ -42,8 +42,8 @@
       <file leaf-file-name="MyAdminTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/stqa/MyAdminTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="35" column="52" lean-forward="false" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
+            <state relative-caret-position="-51">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,8 +52,8 @@
       <file leaf-file-name="TestSticker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/stqa/TestSticker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="72" />
+            <state relative-caret-position="1020">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -444,7 +444,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MyAdminTest.myAdminFirstTest">
+  <component name="RunManager" selected="JUnit.MyAdminTest">
     <configuration default="false" name="MyAdminTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -817,9 +817,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MyAdminTest.myAdminFirstTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MyAdminTest" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.TestSticker" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.MyAdminTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MyAdminTest.myAdminFirstTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.MyAdminTest.myAdminSeventeenTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.MyAdminTest.myAdminNinethTest" />
       </list>
@@ -848,14 +848,8 @@
     <history-entry file="MyAdminTest_myAdminFirstTest - 2017.06.20 at 16h 15m 03s.xml">
       <configuration name="MyAdminTest.myAdminFirstTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestSticker - 2017.06.20 at 15h 25m 11s.xml">
-      <configuration name="TestSticker" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestSticker - 2017.06.20 at 15h 37m 12s.xml">
-      <configuration name="TestSticker" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestSticker - 2017.06.20 at 15h 43m 03s.xml">
-      <configuration name="TestSticker" configurationId="JUnit" />
+    <history-entry file="MyAdminTest_myAdminFirstTest - 2017.06.20 at 16h 16m 00s.xml">
+      <configuration name="MyAdminTest.myAdminFirstTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestSticker - 2017.06.20 at 15h 43m 40s.xml">
       <configuration name="TestSticker" configurationId="JUnit" />
@@ -869,9 +863,15 @@
     <history-entry file="TestSticker - 2017.06.20 at 16h 01m 16s.xml">
       <configuration name="TestSticker" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestSticker - 2017.06.20 at 16h 21m 51s.xml">
+      <configuration name="TestSticker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestSticker - 2017.06.20 at 16h 28m 04s.xml">
+      <configuration name="TestSticker" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1006,8 +1006,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stqa/TestSticker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="72" />
+        <state relative-caret-position="1020">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1016,8 +1016,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stqa/MyAdminTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="35" column="52" lean-forward="false" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
+        <state relative-caret-position="-51">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
