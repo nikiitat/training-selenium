@@ -6,11 +6,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-
 import java.util.concurrent.TimeUnit;
-
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -26,6 +23,15 @@ public class TestSticker {
         } else {
             System.out.println("More than 1");
             return false;
+        }
+    }
+    boolean noSuchElement (By locator) {
+        if (driver.findElements(locator).size() == 0) {
+            System.out.println("No such element");
+            return false;
+        } else {
+            System.out.println("There is 1 element");
+            return true;
         }
     }
 
@@ -69,6 +75,8 @@ public class TestSticker {
         //Purple Duck Latest products
         assertTrue(isOnlyOneElementPresent(By.xpath("//*[@id='box-latest-products']//*[@title='Purple " +
                 "Duck']//*[@class='sticker new']")));
+        assertFalse(noSuchElement(By.xpath("//*[@id='box-latest-products']//*[@title='Purple " +
+                "Duck']//*[@class='sticker sale']")));
     }
 
     @After

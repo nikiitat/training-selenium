@@ -33,6 +33,7 @@ public class MyAdminTest {
 //                "C:\\Tools\\chromedriver.exe");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("http://localhost/litecart/admin/login.php");
         driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("admin");
