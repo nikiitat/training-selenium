@@ -66,7 +66,7 @@ public class MyAdminTest {
 
     @Test
     public void myAdminSecondTest() {
-        driver.findElement(By.xpath("(//span[text()='Catalog'])[1]")).click();
+        driver.findElement(By.xpath("//li[@id='app-']/a/span[text()='Catalog']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Catalog']")));
 
         driver.findElement(By.xpath("//span[text()='Product Groups']")).click();
@@ -94,7 +94,7 @@ public class MyAdminTest {
         assertTrue(isElementPresent(By.xpath("//h1[text()=' CSV Import/Export']")));
 
 
-        driver.findElement(By.xpath("(//span[text()='Catalog'])[2]")).click();
+        driver.findElement(By.xpath("//li[@id='doc-catalog']/a/span[text()='Catalog']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Catalog']")));
     }
 
@@ -112,7 +112,7 @@ public class MyAdminTest {
 
     @Test
     public void myAdminFifthTest(){
-        driver.findElement(By.xpath("(//span[text()='Customers'])[1]")).click();
+        driver.findElement(By.xpath("//li[@id='app-']/a/span[text()='Customers']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Customers']")));
 
         driver.findElement(By.xpath("//span[text()='CSV Import/Export']")).click();
@@ -121,7 +121,7 @@ public class MyAdminTest {
         driver.findElement(By.xpath("//span[text()='Newsletter']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Newsletter']")));
 
-        driver.findElement(By.xpath("(//span[text()='Customers'])[2]")).click();
+        driver.findElement(By.xpath("//li[@id='doc-customers']/a/span[text()='Customers']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Customers']")));
     }
 
@@ -133,13 +133,13 @@ public class MyAdminTest {
 
     @Test
     public void myAdminSeventhTest(){
-        driver.findElement(By.xpath("(//span[text()='Languages'])[1]")).click();
+        driver.findElement(By.xpath("//li[@id='app-']/a/span[text()='Languages']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Languages']")));
 
         driver.findElement(By.xpath("//span[text()='Storage Encoding']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Storage Encoding']")));
 
-        driver.findElement(By.xpath("(//span[text()='Languages'])[2]")).click();
+        driver.findElement(By.xpath("//li[@id='doc-languages']/a/span[text()='Languages']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Languages']")));
     }
 
@@ -172,13 +172,13 @@ public class MyAdminTest {
 
     @Test
     public void myAdminNinethTest(){
-        driver.findElement(By.xpath("(//span[text()='Orders'])[1]")).click();
+        driver.findElement(By.xpath("//li[@id='app-']/a/span[text()='Orders']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Orders']")));
 
         driver.findElement(By.xpath("//span[text()='Order Statuses']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Order Statuses']")));
 
-        driver.findElement(By.xpath("(//span[text()='Orders'])[2]")).click();
+        driver.findElement(By.xpath("//li[@id='doc-orders']/a/span[text()='Orders']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Orders']")));
     }
 
@@ -280,11 +280,11 @@ public class MyAdminTest {
 
     @Test
     public void myAdminSeventeenTest(){
-        assertTrue(isElementPresent(By.xpath("(//span[text()='vQmods'])[1]")));
-        driver.findElement(By.xpath("(//span[text()='vQmods'])[1]")).click();
+        assertTrue(isElementPresent(By.xpath("//li[@id='app-']/a/span[text()='vQmods']")));
+        driver.findElement(By.xpath("//li[@id='app-']/a/span[text()='vQmods']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' vQmods']")));
 
-        driver.findElement(By.xpath("(//span[text()='vQmods'])[2]")).click();
+        driver.findElement(By.xpath("//li[@id='doc-vqmods']/a/span[text()='vQmods']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' vQmods']")));
     }
 
