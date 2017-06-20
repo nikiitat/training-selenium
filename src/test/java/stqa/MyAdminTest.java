@@ -4,7 +4,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.*;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -23,10 +22,7 @@ public class MyAdminTest {
         try {
             wait.until((WebDriver d) -> d.findElement(locator));
             return true;
-        } catch (InvalidSelectorException ex) {
-            throw ex;
-        }
-        catch (NoSuchElementException ex) {
+        } catch (TimeoutException ex) {
             return false;
         }
     }
@@ -37,7 +33,6 @@ public class MyAdminTest {
 //                "C:\\Tools\\chromedriver.exe");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("http://localhost/litecart/admin/login.php");
         driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("admin");

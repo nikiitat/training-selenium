@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="90de8090-029c-48cb-8ca0-0eb1deb7257c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/stqa/MyAdminTest.java" afterPath="$PROJECT_DIR$/src/test/java/stqa/MyAdminTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/stqa/TestSticker.java" afterPath="$PROJECT_DIR$/src/test/java/stqa/TestSticker.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -42,9 +41,11 @@
       <file leaf-file-name="MyAdminTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/stqa/MyAdminTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="3774">
+              <caret line="234" column="35" lean-forward="false" selection-start-line="234" selection-start-column="35" selection-end-line="234" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -842,6 +843,9 @@
     <history-entry file="MyAdminTest - 2017.06.20 at 15h 57m 21s.xml">
       <configuration name="MyAdminTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MyAdminTest - 2017.06.20 at 16h 40m 40s.xml">
+      <configuration name="MyAdminTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="MyAdminTest_myAdminFirstTest - 2017.06.20 at 16h 13m 56s.xml">
       <configuration name="MyAdminTest.myAdminFirstTest" configurationId="JUnit" />
     </history-entry>
@@ -850,9 +854,6 @@
     </history-entry>
     <history-entry file="MyAdminTest_myAdminFirstTest - 2017.06.20 at 16h 16m 00s.xml">
       <configuration name="MyAdminTest.myAdminFirstTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestSticker - 2017.06.20 at 15h 43m 40s.xml">
-      <configuration name="TestSticker" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestSticker - 2017.06.20 at 15h 45m 55s.xml">
       <configuration name="TestSticker" configurationId="JUnit" />
@@ -931,7 +932,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1016,9 +1019,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stqa/MyAdminTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="3774">
+          <caret line="234" column="35" lean-forward="false" selection-start-line="234" selection-start-column="35" selection-end-line="234" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
