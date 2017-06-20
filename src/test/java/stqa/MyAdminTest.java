@@ -21,17 +21,6 @@ public class MyAdminTest {
     boolean isElementPresent(By locator) {
         try {
             wait.until((WebDriver d) -> d.findElement(locator));
-//            driver.findElement(locator);
-            return true;
-        } catch (TimeoutException ex) {
-            return false;
-        }
-    }
-
-    boolean isElementPresent1(By locator) {
-        try {
-            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-            driver.findElement(locator);
             return true;
         } catch (TimeoutException ex) {
             return false;
@@ -44,7 +33,6 @@ public class MyAdminTest {
 //                "C:\\Tools\\chromedriver.exe");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
-//        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("http://localhost/litecart/admin/login.php");
         driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("admin");
@@ -244,9 +232,9 @@ public class MyAdminTest {
 
     @Test
     public void myAdminFourteenTest(){
-        assertTrue(isElementPresent1(By.xpath("//span[text()='Tax']")));
+        assertTrue(isElementPresent(By.xpath("//span[text()='Tax']")));
         driver.findElement(By.xpath("//span[text()='Tax']")).click();
-        assertTrue(isElementPresent1(By.xpath("//h1[text()=' Tax Classes']")));
+        assertTrue(isElementPresent(By.xpath("//h1[text()=' Tax Classes']")));
 
         driver.findElement(By.xpath("//span[text()='Tax Rates']")).click();
         assertTrue(isElementPresent(By.xpath("//h1[text()=' Tax Rates']")));
