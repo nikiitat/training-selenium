@@ -16,17 +16,6 @@ import static org.junit.Assert.assertTrue;
 public class MyAdminTest {
     private WebDriver driver;
 
-    boolean isElementPresent(By locator) {
-        try {
-            driver.findElement(locator);
-            return true;
-        } catch (InvalidSelectorException ex){
-            throw ex;
-        } catch (TimeoutException ex) {
-            return false;
-        }
-    }
-
     @Before
     public void start(){
 //        System.setProperty("webdriver.chrome.driver",
@@ -65,6 +54,17 @@ public class MyAdminTest {
                 }
                 links=driver.findElements(By.xpath("//li[@id='app-']/a/span[@class='name']"));
             }
+        }
+    }
+
+    boolean isElementPresent(By locator) {
+        try {
+            driver.findElement(locator);
+            return true;
+        } catch (InvalidSelectorException ex){
+            throw ex;
+        } catch (TimeoutException ex) {
+            return false;
         }
     }
 
