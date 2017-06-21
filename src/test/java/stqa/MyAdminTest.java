@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
@@ -20,22 +21,12 @@ public class MyAdminTest {
     private WebDriverWait wait;
     private WebElement element;
 
-    boolean moreElementPresent (By locator) {
-        try {
-            wait.until((WebDriver d) ->  driver.findElements(locator).size() == 1);
-            System.out.println("Only 1 element present");
-            return true;
-        } catch (TimeoutException ex){
-            System.out.println("More than 1 or not present");
-            return false;
-        }
-    }
-
     @Before
     public void start(){
 //        System.setProperty("webdriver.chrome.driver",
 //                "C:\\Tools\\chromedriver.exe");
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
         driver.get("http://localhost/litecart/admin/login.php");
         driver.findElement(By.name("username")).sendKeys("admin");
@@ -46,50 +37,32 @@ public class MyAdminTest {
 
     @Test
     public void myAdminFirstTest(){
+        List<WebElement> links = driver.findElements(By.xpath("//li[@id='app-']//*[@class='name']"));
+        List<WebElement> links2;
+        System.out.println(links.size());
 
-        List<WebElement> links = driver.findElements(By.xpath("//li[@id='app-']"));
-        List<WebElement> links2 = driver.findElements(By.xpath("//ul[@class='docs']"));
-
-        String[] linkTexts = new String[links.size()];
-        String[] linkTexts2 = new String[links.size()];
-        int i = 0;
-
-        for (WebElement elements : links) {
-            linkTexts[i] = elements.getText();
-            System.out.println(linkTexts[i]);
-            i++;
-        }
-        for (String t : linkTexts) {
-            driver.findElement(By.linkText(t)).click();
-
-            if (driver.findElements(By.xpath("//ul[@class='docs']")).size() > 0){
-                for (WebElement elements : links2) {
-                    linkTexts2[i] = elements.getText();
-                    System.out.println(linkTexts2[i]);
-                    i++;
+        for(int i=0;i<links.size();i++)
+        {
+            if(!(links.get(i).getText().isEmpty()))
+            {
+                System.out.println(links.get(i).getText());
+                links.get(i).click();
+//                WebElement element =driver.findElement(By.xpath("//li[@id='app-']//*[@class='name']"));
+                links2 = driver.findElements(By.xpath("//li[@id='app-']//*[@id]"));
+                System.out.println(links2.get(1).getText());
+                if (links2.size() > 0){
+                for (int a = 0; a < links2.size(); a++) {
+                    if (!(links2.get(a).getText().isEmpty())) {
+                        System.out.println(links2.get(a).getText());
+                        links2.get(a).click();
+                    }
                 }
-            }else {
-                driver.navigate().back();;
+            }
+                driver.navigate().back();
+                links=driver.findElements(By.xpath("//li[@id='app-']//*[@class='name']"));
+
             }
         }
-
-//        System.out.println("Total selected rows are " + links.size());
-//        for(int i=0;i<links.size();i++)
-//            System.out.println(links.get(i).getText());
-//        for(int i=0;i<links.size();i++){
-//            links.get(i).getText();
-//            driver.get(links);
-//            driver.navigate().back();
-//        }
-
-//        driver.findElement(By.xpath("//span[text()='Appearence']")).click();
-//        assertTrue(isElementPresent(By.xpath("//h1[text()=' Template']")));
-//
-//        driver.findElement(By.xpath("//span[text()='Logotype']")).click();
-//        assertTrue(isElementPresent(By.xpath("//h1[text()=' Logotype']")));
-//
-//        driver.findElement(By.xpath("//span[text()='Template']")).click();
-//        assertTrue(isElementPresent(By.xpath("//h1[text()=' Template']")));
     }
 
     @After
