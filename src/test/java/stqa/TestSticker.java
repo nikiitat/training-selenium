@@ -39,7 +39,7 @@ public class TestSticker {
                 AssertionError assertError = new AssertionError();
                 System.out.println("Duck with no sticker or with more than one sticker. Item number is " + i + " ."
                         +assertError.getMessage());
-                Assert.fail();;
+                Assert.fail();
             }
         }
         System.out.println("All ducks have stickers");

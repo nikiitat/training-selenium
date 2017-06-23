@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90de8090-029c-48cb-8ca0-0eb1deb7257c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/stqa/MyProductTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/stqa/MyProductTest.java" afterPath="$PROJECT_DIR$/src/test/java/stqa/MyProductTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/stqa/TestSticker.java" afterPath="$PROJECT_DIR$/src/test/java/stqa/TestSticker.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -52,12 +53,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyProductTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyProductTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/stqa/MyProductTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="146">
+              <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestSticker.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestSticker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/stqa/TestSticker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="120">
+              <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -375,8 +378,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/stqa/SortingCountriesTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/stqa/MyProductTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/stqa/TestSticker.java" />
+        <option value="$PROJECT_DIR$/src/test/java/stqa/MyProductTest.java" />
       </list>
     </option>
   </component>
@@ -823,10 +826,10 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestSticker - 2017.06.23 at 19h 18m 20s.xml">
+    <history-entry file="TestSticker - 2017.06.23 at 19h 30m 45s.xml">
       <configuration name="TestSticker" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestSticker - 2017.06.23 at 19h 30m 45s.xml">
+    <history-entry file="TestSticker - 2017.06.23 at 19h 33m 11s.xml">
       <configuration name="TestSticker" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestSticker_myAdminFirstTest - 2017.06.23 at 19h 04m 53s.xml">
@@ -867,7 +870,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29780564" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29780564" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1304,14 +1307,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/stqa/MyProductTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stqa/MyAdminTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1325,9 +1320,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stqa/TestSticker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="120">
+          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/stqa/MyProductTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
