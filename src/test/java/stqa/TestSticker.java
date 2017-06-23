@@ -7,23 +7,22 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.*;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by nikitatertytskyi on 19.06.17.
  */
 public class TestSticker {
     private WebDriver driver;
-    private WebDriverWait wait;
 
     @Before
     public void start(){
 //        System.setProperty("webdriver.chrome.driver",
 //                "C:\\Tools\\chromedriver.exe");
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 10);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://localhost/litecart/en/");
         driver.findElement(By.cssSelector("img[alt=\"My Store\"]"));
     }
