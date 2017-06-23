@@ -1,6 +1,7 @@
 package stqa;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -30,21 +31,20 @@ public class TestSticker {
 
     @Test
     public void myAdminFirstTest(){
-        List<WebElement> links = driver.findElements(By.xpath("//li[@class='product column shadow hover-light']"));
+        List<WebElement> ducks = driver.findElements(
+                By.cssSelector("div.content li.product.column.shadow.hover-light"));
 
-        for(int i=0;i<links.size();i++){
-            WebElement element = links.get(i);
-            assertTrue(isElementPresent(element, By.xpath(".//div[@class='image-wrapper']//div[@class][@title]")));
+        for(int i=0;i<ducks.size();i++){
+            WebElement element = ducks.get(i);
+            if (! (element.findElements(By.cssSelector("div[class='sticker new']")).size() == 1 ||
+                    element.findElements(By.cssSelector("div[class='sticker sale']")).size() == 1)) {
+                AssertionError assertError = new AssertionError();
+                System.out.println("Duck with no sticker or with more than one sticker. Item number is " + i + " ."
+                        +assertError.getMessage());
+                Assert.fail();;
+            }
         }
-    }
-
-    boolean isElementPresent (WebElement el, By locator) {
-        try {
-            wait.until((WebDriver d) ->  el.findElements(locator).size() == 1);
-            return true;
-        } catch (TimeoutException ex){
-            return false;
-        }
+        System.out.println("All ducks have stickers");
     }
 
     @After
