@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.*;
 import java.util.List;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Created by nikitatertytskyi on 19.06.17.
