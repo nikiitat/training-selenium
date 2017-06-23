@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac5c32d2-562a-4de5-8ae5-8b74c6c99d67" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/stqa/SortingCountriesTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/stqa/SortingCountriesTest.java" afterPath="$PROJECT_DIR$/src/test/java/stqa/SortingCountriesTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -26,24 +22,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SortingCountriesTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/stqa/SortingCountriesTest.java">
+      <file leaf-file-name="MyAdminTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/stqa/MyAdminTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="69" column="4" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
-              <folding>
-                <element signature="e#1230#1238#0" expanded="true" />
-                <element signature="e#1291#1299#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyAdminTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/stqa/MyAdminTest.java">
+      <file leaf-file-name="SortingCountriesTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/stqa/SortingCountriesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="275">
+              <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -699,34 +692,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.22 at 20h 48m 09s.xml">
+    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.23 at 12h 15m 12s.xml">
       <configuration name="SortingCountriesTest.mySortingCountriesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.22 at 22h 51m 39s.xml">
+    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.23 at 12h 16m 41s.xml">
       <configuration name="SortingCountriesTest.mySortingCountriesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.22 at 22h 53m 05s.xml">
+    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.23 at 12h 20m 05s.xml">
       <configuration name="SortingCountriesTest.mySortingCountriesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.22 at 22h 55m 57s.xml">
+    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.23 at 12h 22m 01s.xml">
       <configuration name="SortingCountriesTest.mySortingCountriesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.22 at 22h 58m 37s.xml">
+    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.23 at 12h 25m 14s.xml">
       <configuration name="SortingCountriesTest.mySortingCountriesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.22 at 23h 00m 39s.xml">
+    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.23 at 12h 26m 27s.xml">
       <configuration name="SortingCountriesTest.mySortingCountriesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.22 at 23h 03m 36s.xml">
+    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.23 at 12h 28m 49s.xml">
       <configuration name="SortingCountriesTest.mySortingCountriesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.22 at 23h 12m 09s.xml">
+    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.23 at 12h 33m 04s.xml">
       <configuration name="SortingCountriesTest.mySortingCountriesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.22 at 23h 13m 24s.xml">
+    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.23 at 12h 39m 00s.xml">
       <configuration name="SortingCountriesTest.mySortingCountriesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.22 at 23h 16m 38s.xml">
+    <history-entry file="SortingCountriesTest_mySortingCountriesTest - 2017.06.23 at 12h 42m 05s.xml">
       <configuration name="SortingCountriesTest.mySortingCountriesTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -795,20 +788,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stqa/MyAdminTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="272">
+          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stqa/SortingCountriesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="69" column="4" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
-          <folding>
-            <element signature="e#1230#1238#0" expanded="true" />
-            <element signature="e#1291#1299#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="275">
+          <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>

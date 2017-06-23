@@ -37,37 +37,66 @@ public class SortingCountriesTest {
         driver.navigate().to("http://localhost/litecart/admin/?app=countries&doc=countries");
         sort();
     }
+    @Test
+    public void mySortingGeoZones(){
+        driver.get("http://localhost/litecart/admin/login.php");
+        login();
+        driver.navigate().to("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
+        sortZones();
+    }
+
+    public void sortZones(){
+        
+    }
 
     public void sort() {
         List<WebElement> rows = driver.findElements(By.cssSelector("table.dataTable tr.row"));
-        ArrayList<String> originalOrder = new ArrayList<String>();
-        TreeSet<String> sortedOrder = new TreeSet<String>();
+        ArrayList<String> originalOrderCountries = new ArrayList<>();
+        TreeSet<String> sortedOrderCountries = new TreeSet<>();
+        ArrayList<String> originalOrderZones = new ArrayList<>();
+        TreeSet<String> sortedOrderZones = new TreeSet<>();
 
         System.out.print(rows.size());
-
-
-        for (int j = 0; j < rows.size(); j++) {
-            String countryName = rows.get(j).findElements(By.cssSelector("td")).get(4).findElement((By.cssSelector
+        for (int i = 0; i < rows.size(); i++) {
+            String countryName = rows.get(i).findElements(By.cssSelector("td")).get(4).findElement((By.cssSelector
                     ("a")))
                     .getText();
-            System.out.print(countryName);
-            originalOrder.add(countryName);
-            sortedOrder.add(countryName);
+            originalOrderCountries.add(countryName);
+            sortedOrderCountries.add(countryName);
+            if (!(rows.get(i).findElements(By.cssSelector("td")).get(5).getText()).equals("0")) {
+                rows.get(i).findElements(By.cssSelector("td")).get(4).findElement((By.cssSelector
+                        ("a"))).click();
+                List<WebElement> rowsZones = driver.findElements(By.cssSelector("table#table-zones tr"));
+                originalOrderZones.clear();
+                sortedOrderZones.clear();
+                for (int j = 1; j < rowsZones.size() - 1; j++) {
+                    String zonesName = rowsZones.get(j).findElements(By.cssSelector("td")).get(2).getText();
+                    originalOrderZones.add(zonesName);
+                    sortedOrderZones.add(zonesName);
+                }
+                assertTrue(compare(originalOrderZones, sortedOrderZones));
+                System.out.println(countryName + "'s zones are displayed in an alphabetical order");
+                driver.navigate().to("http://localhost/litecart/admin/?app=countries&doc=countries");
+                rows = driver.findElements(By.cssSelector("table.dataTable tr.row"));
+            } else {
+                System.out.println(countryName + " has not zones");
+            }
+            rows = driver.findElements(By.cssSelector("table.dataTable tr.row"));
         }
-        assertTrue(compare(originalOrder, sortedOrder));
+        assertTrue(compare(originalOrderCountries, sortedOrderCountries));
     }
 
     private boolean compare(ArrayList<String> originalOrder, TreeSet<String> sortedOrder) {
-        String []str = sortedOrder.toArray(new String[sortedOrder.size()]);
+        String []sorted = sortedOrder.toArray(new String[sortedOrder.size()]);
         for(int i = 0; i<originalOrder.size(); i++) {
-            System.out.println('\t' + originalOrder.get(i) + " <===> " + str[i]);
-            if (!originalOrder.get(i).trim().toLowerCase().equals(str[i].trim().toLowerCase())) {
+            System.out.println('\t' + originalOrder.get(i) + " == " + sorted[i]);
+            if (!originalOrder.get(i).toLowerCase().equals(sorted[i].toLowerCase())) {
                 return false;
             }
         }
         return true;
     }
-    
+
     private void login(){
         driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("admin");
