@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class TestBase {
     protected WebDriver driver = null;
-    protected String browser = "firefox";
+    protected String browser = "chrome";
 
 
     @Before
