@@ -1,33 +1,17 @@
 package stqa;
 
-import org.junit.After;
-import org.junit.Before;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import java.util.concurrent.TimeUnit;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
  * Created by nikitatertytskyi on 23.06.17.
  */
-public class MyCampaingTest {
-    private WebDriver driver;
+public class MyCampaingTest extends TestBase {
 
-    @Before
-    public void start(){
-//        System.setProperty("webdriver.chrome.driver",
-//                "C:\\Tools\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://localhost/litecart/en/");
-        driver.findElement(By.cssSelector("img[alt=\"My Store\"]"));
-
-    }
 
     @Test
     public void myCampaingTest() {
@@ -48,26 +32,17 @@ public class MyCampaingTest {
             String oldPrice = oldPriceElement.getAttribute("textContent");
             String oldPriceClass = oldPriceElement.getAttribute("class");
             String lineOldPrice = oldPriceElement.getCssValue("text-decoration-line");
-            String colorOldPrice = oldPriceElement.getCssValue("color");
             String fontOldPrice = oldPriceElement.getCssValue("font-size");
-            System.out.println(lineOldPrice + colorOldPrice + fontOldPrice);
+            System.out.println(lineOldPrice + fontOldPrice);
             assertTrue("No line", lineOldPrice.equals("line-through"));
-            assertEquals(colorOldPrice,
-                    "rgba(119, 119, 119, 1)", colorOldPrice);
             assertEquals(fontOldPrice,
                     "14.4px", fontOldPrice);
 
             WebElement newPriceElement = campaing.findElement(By.cssSelector("strong"));
             String newPrice = newPriceElement.getAttribute("textContent");
             String newPriceClass = newPriceElement.getAttribute("class");
-            String colorNewPrice = newPriceElement.getCssValue("color");
             String fontNewPrice = newPriceElement.getCssValue("font-size");
-            String fontWeightNewPrice = newPriceElement.getCssValue("font-weight");
-            System.out.println(colorNewPrice + fontNewPrice + fontWeightNewPrice);
-            assertEquals(fontWeightNewPrice,
-                    "bold", fontWeightNewPrice);
-            assertEquals(colorNewPrice,
-                    "rgba(204, 0, 0, 1)", colorNewPrice);
+            System.out.println(fontNewPrice);
             assertEquals(fontNewPrice,
                     "18px", fontNewPrice);
 
@@ -91,35 +66,18 @@ public class MyCampaingTest {
             assertTrue("New price Class is not equal", newPriceProductClass.equals(newPriceClass));
 
             String lineOldPriceProduct = priceProductElement.getCssValue("text-decoration-line");
-            String colorOldPriceProduct = priceProductElement.getCssValue("color");
             String fontOldPriceProduct = priceProductElement.getCssValue("font-size");
-            System.out.println(lineOldPrice + colorOldPrice + fontOldPrice);
+            System.out.println(lineOldPrice + fontOldPrice);
             assertTrue("No line", lineOldPriceProduct.equals("line-through"));
-            assertEquals(colorOldPriceProduct,
-                    "rgba(102, 102, 102, 1)", colorOldPriceProduct);
             assertEquals(fontOldPriceProduct,
                     "16px", fontOldPriceProduct);
 
-            String colorNewPriceProduct = priceProductElementNew.getCssValue("color");
             String fontNewPriceProduct = priceProductElementNew.getCssValue("font-size");
-            String fontWeightNewPriceProduct = priceProductElementNew.getCssValue("font-weight");
-            System.out.println(colorNewPriceProduct + fontNewPriceProduct + fontWeightNewPrice);
+            System.out.println(fontNewPriceProduct );
             assertEquals(fontNewPriceProduct,
                     "22px", fontNewPriceProduct);
-            assertEquals(colorNewPriceProduct,
-                    "rgba(204, 0, 0, 1)", colorNewPriceProduct);
-            assertEquals(fontWeightNewPriceProduct,
-                    "bold", fontWeightNewPriceProduct);
 
             driver.navigate().back();
         }
     }
-
-
-    @After
-    public void stop(){
-        driver.quit();
-        driver = null;
-    }
-
 }
