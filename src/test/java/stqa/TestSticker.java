@@ -34,8 +34,7 @@ public class TestSticker {
 
         for(int i=0;i<ducks.size();i++){
             WebElement element = ducks.get(i);
-            if (! (element.findElements(By.cssSelector("div[class='sticker new']")).size() == 1 ||
-                    element.findElements(By.cssSelector("div[class='sticker sale']")).size() == 1)) {
+            if (! (element.findElements(By.cssSelector("div.sticker")).size() == 1)) {
                 AssertionError assertError = new AssertionError();
                 System.out.println("Duck with no sticker or with more than one sticker. Item number is " + i + " ."
                         +assertError.getMessage());

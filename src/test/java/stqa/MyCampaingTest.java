@@ -12,7 +12,6 @@ import static org.junit.Assert.assertTrue;
  */
 public class MyCampaingTest extends TestBase {
 
-
     @Test
     public void myCampaingTest() {
         campaingTest();
