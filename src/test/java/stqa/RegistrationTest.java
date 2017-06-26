@@ -10,18 +10,18 @@ import static org.junit.Assert.assertTrue;
  * Created by nikitatertytskyi on 25.06.17.
  */
 public class RegistrationTest extends TestBase {
-    String name ="Test";
-    String lastN ="Tester";
-    String address ="Tester ave";
-    String postcode ="01234";
-    String city ="Madrid";
-    String country ="United States";
-    String email ="some.random@email.com";
-    String phone ="+012345678912";
-    String password ="12345678";
+    String name = "Test";
+    String lastN = "Tester";
+    String address = "Tester ave";
+    String postcode = "01234";
+    String city = "Madrid";
+    String country = "United States";
+    String email = "some.random@email.com";
+    String phone = "+012345678912";
+    String password = "12345678";
 
     @Test
-    public void myregistrationTest (){
+    public void myRegistrationTest (){
         registration();
     }
     public void registration(){
