@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,17 +15,22 @@ import java.util.concurrent.TimeUnit;
  */
 public class TestBase {
     protected WebDriver driver = null;
+    protected WebDriverWait wait;
     protected String browser = "chrome";
 
 
     @Before
     public void beforeTest() {
-        if(browser.equalsIgnoreCase("firefox")) {
-            driver = new FirefoxDriver();
-        }else if (browser.equalsIgnoreCase("chrome")) {
-            driver = new ChromeDriver();
-        }
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//        if(browser.equalsIgnoreCase("firefox")) {
+//            driver = new FirefoxDriver();
+//        }else if (browser.equalsIgnoreCase("chrome")) {
+//            driver = new ChromeDriver();
+//        }
+
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setBrowserName("chrome");
+        driver = new ChromeDriver(caps);
+        wait = new WebDriverWait(driver, 30);
         driver.get("http://localhost/litecart/en/");
     }
 
