@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
     protected WebDriver driver = null;
     protected WebDriverWait wait;
-    protected String browser = "chrome";
+//    protected String browser = "chrome";
 
 
     @Before
